@@ -3,10 +3,18 @@ const buttonSubmit = document.querySelector('#submit')
 const containerCards = document.querySelector('#container-cards')
 
 buttonSubmit.addEventListener('click', addCard)
-// buttonSubmit.addEventListener('click', addCard)
+// document.addEventListener('keyup', verify)
+
+// function verify(event){
+//     if(event.key === 'Enter'){
+//         addCard()
+//     }
+// }
 
 let cardNumber = 1
-function addCard(){
+function addCard(event){
+    console.log(event)
+
     let textInInputNotExists = inputText.value == ''
     if(!textInInputNotExists){
         let card = document.createElement('div')
